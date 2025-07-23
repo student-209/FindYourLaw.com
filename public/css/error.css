@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(180deg, #F3E8FF 0%, #FCE7F3 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    padding: 2rem;
+    max-width: 600px;
+    z-index: 1;
+}
+
+/* Decorative Background Elements */
+.background-shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    background: #E9D5FF;
+    top: -100px;
+    left: -100px;
+    animation: pulse 4s infinite;
+}
+
+.shape-2 {
+    width: 400px;
+    height: 400px;
+    background: #FBCFE8;
+    bottom: -150px;
+    right: -150px;
+    animation: pulse 4s infinite 1s;
+}
+
+/* 404 Heading */
+.error-code {
+    font-size: 150px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #9333EA 0%, #DB2777 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1;
+    margin-bottom: 1rem;
+    position: relative;
+    animation: pulse 2s infinite;
+}
+
+/* Decorative circles around 404 */
+.error-code::before,
+.error-code::after {
+    content: '';
+    position: absolute;
+    border: 4px solid #E9D5FF;
+    border-radius: 50%;
+}
+
+.error-code::before {
+    width: 60px;
+    height: 60px;
+    top: -20px;
+    left: -20px;
+    animation: spin 8s linear infinite;
+}
+
+.error-code::after {
+    width: 40px;
+    height: 40px;
+    bottom: -10px;
+    right: -10px;
+    animation: bounce 2s infinite;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #9333EA 0%, #DB2777 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+}
+
+.message {
+    color: #4B5563;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+.button-primary {
+    background: linear-gradient(135deg, #9333EA 0%, #DB2777 100%);
+    color: white;
+    border: none;
+}
+
+.button-secondary {
+    background: white;
+    color: #374151;
+    border: 2px solid #E9D5FF;
+}
+
+.button-secondary:hover {
+    border-color: #D8B4FE;
+}
+
+.decorative-line {
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(135deg, #9333EA 0%, #DB2777 100%);
+    margin: 3rem auto 0;
+    border-radius: 2px;
+    animation: pulse 2s infinite;
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Icon styles */
+.icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.button:hover .icon {
+    transform: rotate(12deg);
+}
+
+.button:hover .icon-refresh {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 640px) {
+    .error-code {
+        font-size: 120px;
+    }
+    
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+        justify-content: center;
+    }
+}

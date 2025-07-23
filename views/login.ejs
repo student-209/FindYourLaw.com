@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="/css/login.css">
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Translate Script -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+
+  <header class="header-container">
+    <div class="logo">
+      <h2>FindYourLaw.com</h2>
+    </div>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/contactus">Contact Us</a>
+      <a href="/help">Help</a>
+    </nav>
+    <!-- Google Translate Dropdown -->
+    <div id="google_translate_element" class="translate-box"></div>
+  </header>
+
+  <div class="wrapper">
+    <div class="form-box login">
+      <form action="/authentication" method="post">
+        <h1 id="h1">Login</h1>
+        <div class="input-box">
+          <input type="text" placeholder="Username" name="username" required>
+          <i class="fas fa-user icon"></i>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Password" name="password" required>
+          <i class="fas fa-lock icon"></i>
+        </div>
+
+        <div class="extra-options">
+          <label>
+            <input type="checkbox"> Remember Me
+          </label>
+          <a href="/forgot-password" class="forgot-password">Forgot Password?</a>
+        </div>
+
+        <button type="submit">Login</button>
+        <hr />
+        <!-- Google Login Button -->
+        <button type="button" class="google-btn" onclick="window.location.href='/auth/google'">
+          <i class="fab fa-google"></i> Continue with Google
+        </button>
+      </form>
+      <br />
+      <h6 id="h6">
+        Don't have an account? <a href="/register">Sign Up</a>
+      </h6>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2024 Emperor - Laws And Regulations. All Rights Reserved | Made with ❤️ in India</p>
+  </footer>
+
+</body>
+</html>

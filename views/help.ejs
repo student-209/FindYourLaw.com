@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --header-height: 60px;
+            --footer-height: 40px;
+            --primary-color: #282c34;
+            --accent-color: sandybrown;
+            --link-hover: indianred;
+            --button-blue: #007bff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url('/css/image.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            padding-top: 180px;
+            padding-bottom: 60px;
+        }
+
+        .header-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--primary-color);
+            padding: 10px;
+            color: white;
+            z-index: 1000;
+            opacity: 0.95;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            padding: 5px 0;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 1rem;
+            background: var(--accent-color);
+            border-radius: 6px;
+            transition: 0.3s;
+            text-align: center;
+            display: block;
+        }
+
+        .nav-links a:hover {
+            background: transparent;
+            border: 1px solid var(--link-hover);
+        }
+
+        .content {
+            width: 90%;
+            margin: 15px auto;
+            background-color: rgba(11, 9, 9, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            overflow-y: auto;
+            max-height: calc(100vh - 250px);
+        }
+
+        h2 {
+            color: var(--accent-color);
+            font-size: 1.4rem;
+            margin: 20px 0 15px 0;
+        }
+
+        h3 {
+            color: white;
+            font-size: 1.2rem;
+            margin: 15px 0 10px 0;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        ul, ol {
+            margin: 0 0 15px 20px;
+            line-height: 1.6;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .contact-button {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 1rem;
+            background: var(--accent-color);
+            border-radius: 6px;
+            transition: 0.3s;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .contact-button:hover {
+            background: transparent;
+            border: 1px solid var(--link-hover);
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--primary-color);
+            padding: 10px;
+            color: white;
+            text-align: center;
+            opacity: 0.95;
+        }
+
+        /* Tablet styles (768px and up) */
+        @media screen and (min-width: 768px) {
+            body {
+                padding-top: 100px;
+            }
+
+            .header-container {
+                padding: 15px 30px;
+            }
+
+            .nav-links {
+                flex-direction: row;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .nav-links a {
+                padding: 8px 20px;
+                font-size: 1.1rem;
+            }
+
+            .content {
+                max-width: 700px;
+                padding: 30px;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+            }
+
+            p, li {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Desktop styles (1024px and up) */
+        @media screen and (min-width: 1024px) {
+            .header-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 50px;
+            }
+
+            .logo h1 {
+                font-size: 2.8rem;
+            }
+
+            .nav-links {
+                margin-top: 0;
+            }
+
+            .content {
+                padding: 40px;
+                margin-top: 30px;
+            }
+
+            p, li {
+                font-size: 1.4rem;
+            }
+        }
+
+        /* Touch device optimizations */
+        @media (hover: none) {
+            .nav-links a,
+            .contact-button {
+                padding: 12px 16px;
+            }
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            .header-container,
+            .footer {
+                background-color: #1a1a1a;
+            }
+        }
+
+        /* High contrast mode */
+        @media (prefers-contrast: high) {
+            :root {
+                --primary-color: #000000;
+                --accent-color: #ff6b00;
+                --link-hover: #ff0000;
+                --button-blue: #0051ff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="logo">
+            <h1>Help Center</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="#getting-started">Getting Started</a>
+            <a href="#account">Account</a>
+            <a href="#support">Support</a>
+        </nav>
+    </div>
+
+    <main class="content">
+        <section id="getting-started">
+            <h2>Getting Started</h2>
+            <h3>Creating Your Account</h3>
+            <p>Follow these simple steps to get started:</p>
+            <ul>
+                <li>Click the "Sign Up" button in the header</li>
+                <li>Enter your email address</li>
+                <li>Create a secure password</li>
+                <li>Complete your profile information</li>
+            </ul>
+        </section>
+
+        <section id="account">
+            <h2>Account Management</h2>
+            <h3>Profile Settings</h3>
+            <ul>
+                <li>Update your personal information</li>
+                <li>Change password or security settings</li>
+                <li>Manage email preferences</li>
+                <li>Control privacy settings</li>
+            </ul>
+        </section>
+
+        <section id="support">
+            <h2>Support</h2>
+            <h3>Contact Us</h3>
+            <p>Need help? Our support team is available 24/7.</p>
+            <a href="mailto:support@example.com" class="contact-button">Email Support</a>
+            <h3>Response Times</h3>
+            <ul>
+                <li>Live Chat: Immediate assistance</li>
+                <li>Email: Within 24 hours</li>
+                <li>Phone: Less than 5 minute wait</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>

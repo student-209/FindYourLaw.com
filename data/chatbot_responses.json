@@ -1,0 +1,43 @@
+[
+    {
+      "question": "can i switch to professional mode",
+      "response": "Yes, you can switch to Professional mode by selecting the 'Professional' option on the dashboard."
+    },
+    {
+      "question": "what is professional mode",
+      "response": "Professional mode allows you in depth search since you know some of the basic law keywords, providing you with real-time data from various legal websites."
+    },
+    {
+      "question": "how do i register",
+      "response": "You can register by going to the Register page, entering your username and password, and clicking the 'Submit' button."
+    },
+    {
+      "question": "what is simple mode",
+      "response": "Simple mode allows you to search for legal information even if you don't know any legal keywords using the built-in database, which contains information about various laws in simpler language."
+    },
+    {
+      "question": "what is the motor vehicles act",
+      "response": "The Motor Vehicles Act ensures that all vehicles are registered and meet safety standards, providing rules for safe driving and penalties for violations."
+    },
+    {
+      "question": "what is the rent control act",
+      "response": "The Rent Control Act ensures fair treatment for tenants and landlords, regulating rent increases and evictions."
+    },
+    {
+      "question": "how do i login",
+      "response": "You can login by entering your username and password on the Login page and clicking the 'Submit' button."
+    },
+    {
+      "question": "can i get help with my case",
+      "response": "Yes, you can get legal assistance. Use our search function to find relevant laws or contact a lawyer for personalized help."
+    },
+    {
+      "question": "how to contact support",
+      "response": "For support, please visit our 'Contact Us' page or email us at support@example.com."
+    },
+    {
+      "question":"who are you",
+      "response":"I am your assistant, Tenali"
+    }
+  ]
+  

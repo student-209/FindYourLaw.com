@@ -1,0 +1,179 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap');
+
+body {
+  background-image: url('/css/image.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* 100% of the viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure header and footer are spaced out */
+  color: white;
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Applying Roboto font */
+}
+
+.container {
+  max-width: 800px;
+  margin: 150px auto 20px; /* Center container and avoid overlap with header */
+  background-color: rgba(11, 9, 9, 0.8); /* Slightly transparent background */
+  padding: 40px;
+  border-radius: 9px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+  font-family: 'Lobster', cursive; /* Applying Lobster font */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+li h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+li p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.law-details {
+  margin: 15px 0;
+}
+
+.law-details h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.law-details ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.law-details li {
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.read-more-btn, .search-again-btn {
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover, .search-again-btn:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: rgba(40, 44, 52, 0.8); /* Slightly transparent */
+  padding: 10px;
+  text-align: center;
+  z-index: 1000;
+  font-family: 'Roboto', sans-serif; /* Applying Roboto font */
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    margin-top: 100px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  li h2 {
+    font-size: 1.25rem;
+  }
+
+  li p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Header styles */
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(40, 44, 52, 0.8); /* Slightly transparent */
+  padding: 20px;
+  color: azure;
+  z-index: 1000;
+  opacity: 0.9;
+}
+
+.logo h2 {
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 10px 20px;
+  font-size: 20px;
+  background: sandybrown;
+  border-radius: 10px;
+  transition: 0.4s;
+  font-family: 'Roboto', sans-serif; /* Applying Roboto font */
+}
+
+.nav-links a:hover {
+  background: transparent;
+  border: 1px solid indianred;
+}
+
+.register a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 20px;
+  background: #007bff;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.register a:hover {
+  background: transparent;
+  border: 1px solid indianred;
+}

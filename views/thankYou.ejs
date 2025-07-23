@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        body {
+  background-image: url('/css/image.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* 100% of the viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+.thank-you-container {
+  background-color: rgba(11, 9, 9, 0.8);
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.check-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 2rem;
+  animation: scaleIn 0.5s ease-out;
+}
+
+.check-icon svg {
+  width: 40px;
+  height: 40px;
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+h1 {
+  color: white; /* Match text color to the rest of the site */
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 0.5s ease-out 0.3s both;
+}
+
+.message {
+  color: white; /* Match text color to the rest of the site */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  animation: fadeIn 0.5s ease-out 0.5s both;
+}
+
+.back-btn {
+  display: inline-block;
+  background-color: #007bff; /* Use the primary button color from the site */
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  animation: fadeIn 0.5s ease-out 0.7s both;
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.social-links {
+  margin-top: 2rem;
+  animation: fadeIn 0.5s ease-out 0.9s both;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #4A90E2;
+}
+
+/* Animation keyframes */
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 480px) {
+  .thank-you-container {
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <div class="check-icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M20 6L9 17L4 12"></path>
+            </svg>
+        </div>
+        
+        <h1 style="font-size: 4rem;">Thank You!</h1>
+        
+        <p class="message" style="font-size: 1.5rem;">
+            We really appreciate you taking the time to share your feedback with us. 
+            Your input helps us improve our services and provide a better experience 
+            for everyone.
+        </p>
+        
+        <a href="feedback.html" class="back-btn">Back to Home</a>
+        
+        <div class="social-links">
+            <a href="#" title="Follow us on Twitter">Twitter</a>
+            <a href="#" title="Like us on Facebook">Facebook</a>
+            <a href="#" title="Follow us on Instagram">Instagram</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,272 @@
+[
+  {
+    "keyword": "buying a car",
+    "title": "Motor Vehicles Act",
+    "summary": "When buying a car, make sure it's registered and has a valid driving license. Check that the vehicle meets safety and emission standards. Follow traffic rules and drive safely to avoid fines.",
+    "law": [
+      {
+        "article_number": "39",
+        "article_title": "Necessity for registration"
+      },
+      {
+        "article_number": "130",
+        "article_title": "Duty to produce license and certificate of registration"
+      }
+    ]
+  },
+  {
+    "keyword": "rent agreement",
+    "title": "Rent Control Act",
+    "summary": "If you're renting a place, ensure your rent agreement is fair. Landlords cannot increase rent or evict you without a valid reason. If issues arise, you have legal rights to protect yourself.",
+    "law": [
+      {
+        "article_number": "4",
+        "article_title": "Fixation of standard rent"
+      },
+      {
+        "article_number": "14",
+        "article_title": "Protection of tenant against eviction"
+      }
+    ]
+  },
+  {
+    "keyword": "marriage",
+    "title": "Hindu Marriage Act",
+    "summary": "For a legal Hindu marriage, you need to meet age requirements and give consent. This act also covers how to handle divorce and alimony if the marriage ends, ensuring fair treatment.",
+    "law": [
+      {
+        "article_number": "5",
+        "article_title": "Conditions for a Hindu marriage"
+      },
+      {
+        "article_number": "13",
+        "article_title": "Divorce"
+      }
+    ]
+  },
+  {
+    "keyword": "gst",
+    "title": "Goods and Services Tax (GST) Act",
+    "summary": "GST combines several taxes into one. When buying goods or services, the tax is included in the price. Businesses need to follow GST rules to ensure proper tax collection and payment.",
+    "law": [
+      {
+        "article_number": "7",
+        "article_title": "Scope of supply"
+      },
+      {
+        "article_number": "37",
+        "article_title": "Furnishing details of outward supplies"
+      }
+    ]
+  },
+  {
+    "keyword": "passport",
+    "title": "Indian Passport Act",
+    "summary": "To get or renew an Indian passport, provide necessary documents and pass identity checks. Avoid any fake information or misuse to prevent legal issues.",
+    "law": [
+      {
+        "article_number": "5",
+        "article_title": "Application for passports"
+      },
+      {
+        "article_number": "12",
+        "article_title": "Offences and penalties"
+      }
+    ]
+  },
+  {
+    "keyword": "employment",
+    "title": "The Employment Exchange Act",
+    "summary": "Register with government job centers if you're looking for work. Employers will list job openings there, helping you find suitable employment.",
+    "law": [
+      {
+        "article_number": "3",
+        "article_title": "Employment exchanges"
+      },
+      {
+        "article_number": "5",
+        "article_title": "Employer's obligation to notify vacancies"
+      }
+    ]
+  },
+  {
+    "keyword": "consumer rights",
+    "title": "Consumer Protection Act",
+    "summary": "If you have issues with products or services, this act helps you file complaints and seek compensation. Businesses must follow fair practices and address customer grievances.",
+    "law": [
+      {
+        "article_number": "2",
+        "article_title": "Definitions"
+      },
+      {
+        "article_number": "12",
+        "article_title": "Manner in which complaint shall be made"
+      }
+    ]
+  },
+  {
+    "keyword": "intellectual property",
+    "title": "Intellectual Property Rights (IPR) Act",
+    "summary": "Protect your creative work like inventions, writings, and designs. Ensure no one uses your intellectual property without permission to prevent misuse and loss.",
+    "law": [
+      {
+        "article_number": "10",
+        "article_title": "Eligibility criteria for registration"
+      },
+      {
+        "article_number": "22",
+        "article_title": "Rights and responsibilities of intellectual property owners"
+      }
+    ]
+  },
+  {
+    "keyword": "company registration",
+    "title": "Companies Act",
+    "summary": "When starting a company, follow the registration process and comply with legal requirements. This includes transparent operations and proper financial reporting.",
+    "law": [
+      {
+        "article_number": "3",
+        "article_title": "Formation of company"
+      },
+      {
+        "article_number": "134",
+        "article_title": "Financial statement, Board's report, etc."
+      }
+    ]
+  },
+  {
+    "keyword": "education",
+    "title": "Right of Children to Free and Compulsory Education Act",
+    "summary": "Children aged 6 to 14 must receive free education. Schools and the government must ensure that all children have access to quality education.",
+    "law": [
+      {
+        "article_number": "3",
+        "article_title": "Right of child to free and compulsory education"
+      },
+      {
+        "article_number": "12",
+        "article_title": "Extent of school responsibilities"
+      }
+    ]
+  },
+  {
+    "keyword": "health",
+    "title": "The Epidemic Diseases Act",
+    "summary": "In case of an epidemic, follow government guidelines for quarantine and public health measures to prevent the spread of disease.",
+    "law": [
+      {
+        "article_number": "2",
+        "article_title": "Power to take special measures and prescribe regulations as to dangerous epidemic disease"
+      },
+      {
+        "article_number": "4",
+        "article_title": "Penalty"
+      }
+    ]
+  },
+  {
+    "keyword": "data protection",
+    "title": "Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules",
+    "summary": "If you handle personal data, ensure you use secure practices to protect it from unauthorized access. Follow rules to keep data safe and private.",
+    "law": [
+      {
+        "article_number": "3",
+        "article_title": "Sensitive personal data or information"
+      },
+      {
+        "article_number": "5",
+        "article_title": "Disclosure of information"
+      }
+    ]
+  },
+  {
+    "keyword": "property",
+    "title": "Transfer of Property Act",
+    "summary": "When buying or selling property, ensure the transfer is legally documented and fair. Follow procedures for registration and ensure all rights and responsibilities are clear.",
+    "law": [
+      {
+        "article_number": "54",
+        "article_title": "Sale"
+      },
+      {
+        "article_number": "107",
+        "article_title": "Lease how made"
+      }
+    ]
+  },
+  {
+    "keyword": "bankruptcy",
+    "title": "Insolvency and Bankruptcy Code",
+    "summary": "If facing financial difficulties, this code helps you through debt recovery or liquidation processes. It provides a structured way to resolve insolvency issues.",
+    "law": [
+      {
+        "article_number": "6",
+        "article_title": "Persons who may initiate corporate insolvency resolution process"
+      },
+      {
+        "article_number": "7",
+        "article_title": "Initiation of corporate insolvency resolution process by financial creditor"
+      }
+    ]
+  },
+  {
+    "keyword": "criminal law",
+    "title": "Indian Penal Code",
+    "summary": "This code outlines what constitutes a crime and the punishments for various offenses. Understand the laws to avoid legal trouble and ensure justice.",
+    "law": [
+      {
+        "article_number": "299",
+        "article_title": "Culpable homicide"
+      },
+      {
+        "article_number": "375",
+        "article_title": "Rape"
+      }
+    ]
+  },
+  {
+    "keyword": "contract",
+    "title": "Indian Contract Act",
+    "summary": "When entering into agreements, make sure they are valid and fair. The act provides guidelines on forming and enforcing contracts to protect both parties involved.",
+    "law": [
+      {
+        "article_number": "10",
+        "article_title": "What agreements are contracts"
+      },
+      {
+        "article_number": "23",
+        "article_title": "What considerations and objects are lawful, and what not"
+      }
+    ]
+  },
+  {
+    "keyword": "environment",
+    "title": "Environment Protection Act",
+    "summary": "Follow rules to protect the environment. This includes proper waste disposal and pollution control to ensure a clean and safe environment for everyone.",
+    "law": [
+      {
+        "article_number": "3",
+        "article_title": "Power of Central Government to take measures to protect and improve environment"
+      },
+      {
+        "article_number": "7",
+        "article_title": "Persons carrying on industry operation not to allow emission or discharge of environmental pollutants in excess of the standards"
+      }
+    ]
+  },
+  {
+    "keyword": "labour",
+    "title": "Factories Act",
+    "summary": "In workplaces, ensure safety standards and health regulations are met. The act provides guidelines to protect workers' rights and ensure safe working conditions.",
+    "law": [
+      {
+        "article_number": "6",
+        "article_title": "Approval, licensing and registration of factories"
+      },
+      {
+        "article_number": "51",
+        "article_title": "Weekly hours"
+      }
+    ]
+  }
+]

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Feedback Form</title>
+    <link rel="stylesheet" href="/css/feedback.css">
+</head>
+<body>
+    <div class="form-container">
+        <form class="feedback-form" id="feedbackForm" action="/thankYou" method="post">
+            <h2>Website Feedback Form</h2>
+            
+            <label>Your Email address *</label>
+            <input 
+                type="text" 
+                name="username" 
+                id="email" 
+                required
+            >
+            
+            <label>Is this the first time you have visited the website? *</label>
+            <div class="radio-group">
+                <label>
+                    <input 
+                        type="radio" 
+                        name="firstVisit" 
+                        value="Yes"
+                        required
+                    >
+                    Yes
+                </label>
+                <label>
+                    <input 
+                        type="radio" 
+                        name="firstVisit" 
+                        value="No"
+                    >
+                    No
+                </label>
+            </div>
+            
+            <label>What is the PRIMARY reason you came to the site?</label>
+            <textarea 
+                name="feedback"
+                type="text" 
+                id="reason"
+            ></textarea>
+            
+            <label>User Friendliness *</label>
+            <div class="rating">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            
+            <button type="submit">Send your feedback</button>
+        </form>
+    </div>
+    <script src="feedback.js"></script>
+</body>
+</html>

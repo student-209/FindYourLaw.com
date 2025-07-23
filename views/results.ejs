@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emperor</title>
+    <link rel="stylesheet" href="/css/results.css">
+    <!-- Google Translate API -->
+    <meta name="google-translate-customization" content=""/>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                includedLanguages: 'hi,en'  // Specify languages e.g., English, Hindi
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+    <header class="header-container">
+        <div class="logo">
+            <h2>FindYourLaw.com</h2>
+        </div>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact Us</a>
+            <a href="/help">Help</a>
+        </nav>
+        <!-- Google Translate Dropdown -->
+        <div id="google_translate_element" class="translate-box"></div>
+    </header>
+    <div class="container">
+        <h1>Results for "<%= query %>"</h1>
+        <ul>
+            <% results.forEach(result => { %>
+                <li>
+                    <h2><%= result.title %></h2>
+                    <p><%= result.summary || '' %></p>
+                    <div class="law-details">
+                        <% if (result.law && result.law.length > 0) { %>
+                            <h3>Relevant Laws:</h3>
+                            <ul>
+                                <% result.law.forEach(law => { %>
+                                    <li>Article <%= law.article_number %>: <%= law.article_title %></li>
+                                <% }); %>
+                            </ul>
+                        <% } %>
+                    </div>
+                    <div class="button-container">
+                        <a href="<%= result.link %>" target="_blank" class="read-more-btn">Read More</a>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+        <% if (results.length === 0) { %>
+            <p>No results found for this query.</p>
+        <% } %>
+        <a href="/dashboard" class="search-again-btn">Search Again</a>
+    </div>
+    <footer>
+        <p>© 2024 Emperor - Laws and Regulations. All rights reserved.</p>
+        <p>Made with ❤️ in India</p>
+    </footer>
+</body>
+</html>

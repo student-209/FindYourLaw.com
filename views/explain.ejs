@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= law.title %></title>
+    <link rel="stylesheet" href="/css/explain.css">
+</head>
+<body>
+    <header class="header-container">
+        <div class="logo">
+            <h2>FindYourLaw.com</h2>
+        </div>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact Us</a>
+            <a href="/help">Help</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1><%= law.title %></h1>
+        <p><%= law.description %></p>
+        <a href="/dashboard" class="search-again-btn">Search Again</a>
+    </div>
+    <footer>
+        <p>© 2024 Emperor - Laws and Regulations. All rights reserved.</p>
+        <p>Made with ❤️ in India</p>
+    </footer>
+</body>
+</html>

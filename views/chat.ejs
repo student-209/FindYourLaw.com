@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat with EmperorBot</title>
+  <link rel="stylesheet" href="/styles/chat.css">
+</head>
+<body>
+  <header>
+    <h1>EmperorBot - Your Legal Assistant</h1>
+  </header>
+
+  <div class="chat-container">
+    <div id="chat-window">
+      <div id="output"></div>
+    </div>
+    <input id="user-input" type="text" placeholder="Ask me about laws or regulations..." />
+    <button id="send-button">Send</button>
+  </div>
+
+  <script>
+    const userInput = document.getElementById("user-input");
+    const sendButton = document.getElementById("send-button");
+    const outputDiv = document.getElementById("output");
+
+    sendButton.addEventListener("click", async () => {
+      const message = userInput.value.trim();
+      if (message) {
+        // Display user message
+        outputDiv.innerHTML += `<p class="user-message"><strong>You:</strong> ${message}</p>`;
+        userInput.value = '';
+
+        // Send the message to the server
+        const response = await fetch('/chatbot', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message })
+        });
+        
+        const data = await response.json();
+        
+        // Display chatbot response
+        outputDiv.innerHTML += `<p class="bot-message"><strong>EmperorBot:</strong> ${data.message}</p>`;
+        outputDiv.scrollTop = outputDiv.scrollHeight; // Auto-scroll to the latest message
+      }
+    });
+
+    // Send message on Enter key press
+    userInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        sendButton.click();
+      }
+    });
+  </script>
+</body>
+</html>

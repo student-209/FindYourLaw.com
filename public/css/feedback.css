@@ -1,0 +1,115 @@
+body {
+  background-image: url('/css/image.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* 100% of the viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-top: 100px; /* To avoid overlap with header */
+  padding-bottom: 80px; /* To avoid overlap with footer */
+  color: white;
+}
+
+.form-container {
+  max-width: 700px;
+  width: 100%;
+  background-color: rgba(11, 9, 9, 0.5);
+  padding: 40px;
+  margin: 20px auto;
+  border-radius: 9px;
+  color: white;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form h2 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.feedback-form label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.feedback-form input[type="text"],
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.feedback-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+.rating {
+  display: flex;
+  gap: 10px;
+}
+
+.rating .star {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.feedback-form button {
+  align-self: center;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.feedback-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  .feedback-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .feedback-form label,
+  .feedback-form input[type="text"],
+  .feedback-form textarea,
+  .feedback-form button {
+    font-size: 1rem;
+  }
+}

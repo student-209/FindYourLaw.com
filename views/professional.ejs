@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindYourLaw.com - Preview</title>
+    <!-- Importing Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
+    <style >
+        body {
+    background-image: url('/css/image.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* 100% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-top: 100px; /* To avoid overlap with header */
+    padding-bottom: 80px; /* To avoid overlap with footer */
+    color: white;
+    font-family: 'Roboto', sans-serif; /* Applying Roboto font */
+    align-content: center;
+}
+
+/* Google Translate Styling */
+.translate-widget {
+  margin-left: 0px;
+  background-color: sandybrown;
+}
+
+#google_translate_element select {
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: rgb(206, 158, 117);
+  border-radius: 10%;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 70px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  font-family:'Times New Roman', Times, serif; 
+}
+
+input{
+    margin-left: 38%;
+    align-items: center;
+}
+
+p {
+  font-size: 25px;
+}
+
+.start {
+  font-size: 50px;
+}
+
+.content {
+  max-width: 700px;
+  background-color: rgba(11, 9, 9, 0.5);
+  padding: 40px;
+  margin-left: 20px;
+  border-radius: 9px;
+  max-height: 800px;
+  margin-top: 10px;
+  color: white;
+  margin-top: 100px;
+}
+
+/* Header styles */
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282c34;
+  padding: 30px;
+  color: azure;
+  z-index: 1000;
+  padding-bottom: 1%; 
+  padding-top: 1%;
+  opacity: 90%;
+  z-index: 0;
+}
+
+.logo h1 {
+  margin: 0;
+  margin-left: 10px;
+}
+
+.nav-links {
+  display: flex;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 50px;
+  padding: 10px 20px;
+  font-size: 20px;
+  background: sandybrown;
+  border-radius: 10px;
+  transition: 0.4s;
+  font-family: 'Roboto', sans-serif; /* Applying Roboto font */
+}
+
+.nav-links a:hover {
+  background: transparent;
+  border: 1px solid indianred;
+}
+
+.register a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 20px;
+  background: #007bff;
+  border-radius: 10px;
+  transition: 0.4s;
+  margin-left: 250px;
+}
+
+.search-button{
+    align-items:center;
+    margin-left: 42%;
+    margin-top: 1.5%;
+    border-radius: 10px;
+    padding: auto;
+    font-size: 2rem;
+}
+
+.register a:hover {
+  background: transparent;
+  border: 1px solid indianred;
+}
+
+/* Footer styles */
+.footer {
+  position: fixed;
+  margin-top: 100px;
+  margin-bottom: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #282c34;
+  padding: 0px;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  font-family: 'Roboto', sans-serif; /* Applying Roboto font */
+  opacity: 90%;
+}
+    </style>
+</head>
+<body>
+    <header class="header-container">
+        <div class="logo">
+            <h1>FindYourLaw.com</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact Us</a>
+            <a href="/help">Help</a>
+            <div class="register">
+                <a href="/register">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="professional-container">
+        <div class="content">
+            <p class="para">
+                Here, you can search for specific laws or regulations that pertain to
+                your profession and stay informed about changes in legislation that
+                may impact your work.
+            </p>
+            <form action="/search-scrape" method="POST">
+                <section class="search-section">
+                    <div class="input-box">
+                        <input
+                            type="text"
+                            name="query" 
+                            class="search-input"
+                            placeholder="Search For a Law"
+                            required
+                        />
+                    </div>
+                    <button type="submit" class="search-button">Search</button>
+                </section>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2024 FindYourLaw.com. All Rights Reserved | Made with ❤️ in India</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css"> <!-- Adjust the path to your CSS file -->
+    <title><%= law.title %> - Details</title>
+</head>
+<body>
+    <header>
+        <h1><%= law.title %></h1>
+    </header>
+    <main>
+        <section class="law-details">
+            <h2>Overview</h2>
+            <p><%= law.summary %></p>
+
+            <h2>Detailed Information</h2>
+            <p><%= law.details %></p>
+
+            <h2>Key Points</h2>
+            <ul>
+                <li><strong>Applicable Fines:</strong> The fines for violations can range from INR 1,000 to INR 10,000, depending on the offense.</li>
+                <li><strong>Legal Proceedings:</strong> Legal action may be initiated if the regulations are not followed.</li>
+                <li><strong>Financial Assistance:</strong> Various government schemes provide financial help for those affected by or seeking compliance with this law.</li>
+            </ul>
+
+            <h2>Additional Resources</h2>
+            <p>For more details or legal assistance, consult a legal expert or visit the official website for this law.</p>
+        </section>
+    </main>
+    <footer>
+        <a href="/simple">Back to Search</a>
+    </footer>
+</body>
+</html>

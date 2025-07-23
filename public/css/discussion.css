@@ -1,0 +1,321 @@
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --header-height: 60px;
+  --footer-height: 40px;
+  --primary-color: #282c34;
+  --accent-color: sandybrown;
+  --link-hover: indianred;
+  --button-blue: #007bff;
+}
+
+body {
+  background-image: url('/css/image.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  padding-top: var(--header-height);
+  padding-bottom: var(--footer-height);
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  padding: 5px 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.discussion-card {
+  background-color: rgba(11, 9, 9, 0.8);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.discussion-header h3 {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.discussion-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  color: var(--accent-color);
+  font-size: 1rem;
+}
+
+.like-btn {
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.like-btn:hover {
+  background: var(--accent-color);
+  color: var(--primary-color);
+}
+
+.discussion-content {
+  color: white;
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.comments-section h4 {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.comments-container {
+  background-color: rgba(11, 9, 9, 0.8);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.comment {
+  border-bottom: 1px solid #444;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.comment:last-child {
+  border-bottom: none;
+}
+
+.comment-content {
+  color: white;
+  font-size: 1rem;
+}
+
+.comment-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-date {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+}
+
+.comment-like-btn {
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 3px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.comment-like-btn:hover {
+  background: var(--accent-color);
+  color: var(--primary-color);
+}
+
+.comment-form {
+  margin-top: 20px;
+}
+
+.comment-input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-input {
+  resize: vertical;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.comment-input:focus {
+  outline: none;
+  border: 1px solid var(--accent-color);
+}
+
+.comment-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.char-count {
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+.submit-comment {
+  background: var(--button-blue);
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-comment:hover {
+  background: #0056b3;
+}
+
+.header-container {
+  background-color: var(--primary-color);
+  padding: 10px;
+  color: white;
+  text-align: center;
+  opacity: 0.95;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--header-height);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--link-hover);
+}
+
+.footer {
+  background-color: var(--primary-color);
+  padding: 10px;
+  color: white;
+  text-align: center;
+  opacity: 0.95;
+  height: var(--footer-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --header-height: 60px;
+  --footer-height: 60px;
+  --primary-color: #282c34;
+  --accent-color: sandybrown;
+  --link-hover: indianred;
+  --button-blue: #007bff;
+}
+
+body {
+  background-image: url('/css/image.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  padding-top: var(--header-height);
+  padding-bottom: var(--footer-height);
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  padding: 5px 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ... rest of the CSS remains the same ... */
+
+.header-container {
+  background-color: var(--primary-color);
+  padding: 10px;
+  color: white;
+  text-align: center;
+  opacity: 0.95;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--header-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--link-hover);
+}
+
+.footer {
+  background-color: var(--primary-color);
+  padding: 10px;
+  color: white;
+  text-align: center;
+  opacity: 0.95;
+  height: var(--footer-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

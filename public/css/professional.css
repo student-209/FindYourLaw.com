@@ -1,0 +1,137 @@
+body {
+  background-image: url('/css/image.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* 100% of the viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-top: 100px; /* To avoid overlap with header */
+  padding-bottom: 80px; /* To avoid overlap with footer */
+  color: white;
+  font-family: 'Roboto', sans-serif; /* Applying Roboto font */
+}
+
+/* Google Translate Styling */
+.translate-widget {
+  margin-left: 0px;
+  background-color: sandybrown;
+}
+
+#google_translate_element select {
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: rgb(206, 158, 117);
+  border-radius: 10%;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 70px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  font-family:'Times New Roman', Times, serif; 
+}
+
+p {
+  font-size: 25px;
+}
+
+.start {
+  font-size: 50px;
+}
+
+.content {
+  max-width: 700px;
+  background-color: rgba(11, 9, 9, 0.5);
+  padding: 40px;
+  margin-left: 20px;
+  border-radius: 9px;
+  max-height: 800px;
+  margin-top: 10px;
+  color: white;
+  margin-top: 100px;
+}
+
+/* Header styles */
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282c34;
+  padding: 30px;
+  color: azure;
+  z-index: 1000;
+  padding-bottom: 1%; 
+  padding-top: 1%;
+  opacity: 90%;
+  z-index: 0;
+}
+
+.logo h1 {
+  margin: 0;
+  margin-left: 10px;
+}
+
+.nav-links {
+  display: flex;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 50px;
+  padding: 10px 20px;
+  font-size: 20px;
+  background: sandybrown;
+  border-radius: 10px;
+  transition: 0.4s;
+  font-family: 'Roboto', sans-serif; /* Applying Roboto font */
+}
+
+.nav-links a:hover {
+  background: transparent;
+  border: 1px solid indianred;
+}
+
+.register a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 20px;
+  background: #007bff;
+  border-radius: 10px;
+  transition: 0.4s;
+  margin-left: 250px;
+}
+
+.register a:hover {
+  background: transparent;
+  border: 1px solid indianred;
+}
+
+/* Footer styles */
+.footer {
+  position: fixed;
+  margin-top: 100px;
+  margin-bottom: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #282c34;
+  padding: 0px;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  font-family: 'Roboto', sans-serif; /* Applying Roboto font */
+  opacity: 90%;
+}

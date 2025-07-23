@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussions</title>
+    <link rel="stylesheet" href="/css/discussion.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/discussions">Discussions</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>All Discussions</h1>
+        <section class="discussions">
+            <% discussions.forEach(discussion => { %>
+                <div class="discussion-card" data-discussion-id="<%= discussion._id %>">
+                    <div class="discussion-header">
+                        <h3><%= discussion.title %></h3>
+                        <div class="discussion-meta">
+                            <span class="date">
+                                <%= new Date(discussion.createdAt).toLocaleDateString('en-US', { 
+                                    year: 'numeric', 
+                                    month: 'long', 
+                                    day: 'numeric' 
+                                }) %>
+                            </span>
+                            <button class="like-btn" data-likes="<%= discussion.likes || 0 %>">
+                                ❤️ <span class="like-count"><%= discussion.likes || 0 %></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="discussion-content">
+                        <p><%= discussion.content %></p>
+                    </div>
+                    <div class="comments-section">
+                        <h4>Comments (<span class="comment-count"><%= discussion.comments ? discussion.comments.length : 0 %></span>)</h4>
+                        <div class="comments-container">
+                            <% if (discussion.comments && discussion.comments.length > 0) { %>
+                                <% discussion.comments.forEach(comment => { %>
+                                    <div class="comment" data-comment-id="<%= comment._id %>">
+                                        <p class="comment-content"><%= comment.content %></p>
+                                        <div class="comment-footer">
+                                            <span class="comment-date">
+                                                <%= new Date(comment.createdAt).toLocaleDateString('en-US', {
+                                                    year: 'numeric',
+                                                    month: 'short',
+                                                    day: 'numeric',
+                                                    hour: '2-digit',
+                                                    minute: '2-digit'
+                                                }) %>
+                                            </span>
+                                            <button class="comment-like-btn">
+                                                ❤️ <span class="comment-like-count"><%= comment.likes || 0 %></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                <% }); %>
+                            <% } %>
+                        </div>
+                        <form class="comment-form">
+                            <textarea class="comment-input" placeholder="Add a comment..." required minlength="5" maxlength="500" rows="3"></textarea>
+                            <button type="submit" class="submit-comment">Post Comment</button>
+                        </form>
+                    </div>
+                </div>
+            <% }); %>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <%= new Date().getFullYear() %> Discussion App</p>
+    </footer>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussions</title>
+    <link rel="stylesheet" href="/css/discussion.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/discussions">Discussions</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>All Discussions</h1>
+        <section class="discussions">
+            <% discussions.forEach(discussion => { %>
+                <div class="discussion-card" data-discussion-id="<%= discussion._id %>">
+                    <div class="discussion-header">
+                        <h3><%= discussion.title %></h3>
+                        <div class="discussion-meta">
+                            <span class="date">
+                                <%= new Date(discussion.createdAt).toLocaleDateString('en-US', { 
+                                    year: 'numeric', 
+                                    month: 'long', 
+                                    day: 'numeric' 
+                                }) %>
+                            </span>
+                            <button class="like-btn" data-likes="<%= discussion.likes || 0 %>">
+                                ❤️ <span class="like-count"><%= discussion.likes || 0 %></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="discussion-content">
+                        <p><%= discussion.content %></p>
+                    </div>
+                    <div class="comments-section">
+                        <h4>Comments (<span class="comment-count"><%= discussion.comments ? discussion.comments.length : 0 %></span>)</h4>
+                        <div class="comments-container">
+                            <% if (discussion.comments && discussion.comments.length > 0) { %>
+                                <% discussion.comments.forEach(comment => { %>
+                                    <div class="comment" data-comment-id="<%= comment._id %>">
+                                        <p class="comment-content"><%= comment.content %></p>
+                                        <div class="comment-footer">
+                                            <span class="comment-date">
+                                                <%= new Date(comment.createdAt).toLocaleDateString('en-US', {
+                                                    year: 'numeric',
+                                                    month: 'short',
+                                                    day: 'numeric',
+                                                    hour: '2-digit',
+                                                    minute: '2-digit'
+                                                }) %>
+                                            </span>
+                                            <button class="comment-like-btn">
+                                                ❤️ <span class="comment-like-count"><%= comment.likes || 0 %></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                <% }); %>
+                            <% } %>
+                        </div>
+                        <form class="comment-form">
+                            <textarea class="comment-input" placeholder="Add a comment..." required minlength="5" maxlength="500" rows="3"></textarea>
+                            <button type="submit" class="submit-comment">Post Comment</button>
+                        </form>
+                    </div>
+                </div>
+            <% }); %>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <%= new Date().getFullYear() %> Discussion App</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Handle likes for discussions
+            document.querySelectorAll('.like-btn').forEach(btn => {
+                btn.addEventListener('click', async () => {
+                    const discussionCard = btn.closest('.discussion-card');
+                    const discussionId = discussionCard.dataset.discussionId;
+
+                    try {
+                        const response = await fetch(`/discussions/${discussionId}/like`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' }
+                        });
+                        const result = await response.json();
+
+                        if (result.success) {
+                            const likeCount = btn.querySelector('.like-count');
+                            likeCount.textContent = parseInt(likeCount.textContent) + 1;
+                        }
+                    } catch (error) {
+                        console.error('Error liking discussion:', error);
+                    }
+                });
+            });
+
+            // Handle comment submissions
+            document.querySelectorAll('.comment-form').forEach(form => {
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const discussionCard = e.target.closest('.discussion-card');
+                    const discussionId = discussionCard.dataset.discussionId;
+                    const textarea = form.querySelector('.comment-input');
+                    const content = textarea.value.trim();
+
+                    if (content.length < 5 || content.length > 500) return;
+
+                    try {
+                        const response = await fetch(`/discussions/${discussionId}/comments`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ content })
+                        });
+                        const result = await response.json();
+
+                        if (result.success) {
+                            const commentsContainer = discussionCard.querySelector('.comments-container');
+                            const commentElement = document.createElement('div');
+                            commentElement.classList.add('comment');
+                            commentElement.innerHTML = `
+                                <p class="comment-content">${content}</p>
+                                <div class="comment-footer">
+                                    <span class="comment-date">Just now</span>
+                                    <button class="comment-like-btn">❤️ <span class="comment-like-count">0</span></button>
+                                </div>
+                            `;
+                            commentsContainer.appendChild(commentElement);
+                            textarea.value = '';
+                        }
+                    } catch (error) {
+                        console.error('Error adding comment:', error);
+                    }
+                });
+            });
+        });

@@ -1,0 +1,141 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap');
+
+body {
+  background-image: url('/css/image.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* 100% of the viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure header and footer are spaced out */
+  color: white;
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Applying Roboto font */
+}
+
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(40, 44, 52, 0.8); /* Slightly transparent */
+  padding: 20px;
+  z-index: 1000;
+}
+
+.logo h2 {
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 10px 20px;
+  background: sandybrown;
+  border-radius: 10px;
+  transition: 0.4s;
+  font-family: 'Roboto', sans-serif; /* Applying Roboto font */
+}
+
+.nav-links a:hover {
+  background: transparent;
+  border: 1px solid indianred;
+}
+
+.translate-box {
+  margin-left: 20px;
+  background-color: sandybrown;
+  padding: 5px;
+  border-radius: 10%;
+}
+
+.space {
+  margin-top: 150px; /* Ensure content doesn't overlap with fixed header */
+  padding: 20px;
+  text-align: center;
+}
+
+.para {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+.input-box {
+  margin-bottom: 10px;
+}
+
+.search-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: rgba(40, 44, 52, 0.8); /* Slightly transparent */
+  padding: 10px;
+  text-align: center;
+  z-index: 1000;
+  font-family: 'Roboto', sans-serif; /* Applying Roboto font */
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+  }
+
+  .space {
+    margin-top: 100px;
+    padding: 10px;
+  }
+
+  .para {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,143 @@
+/* Reset and basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-image: url('/css/image.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px; 
+  padding-bottom: 80px; 
+  color: white;
+}
+
+/* Form and Content Box */
+.form-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  color: #E9D1D1;
+  backdrop-filter: blur(10px);
+  margin: 100px auto;
+}
+
+#h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #160b0b;
+}
+
+/* Input Box */
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  padding-left: 40px; /* Space for the icon */
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.input-box .icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  font-size: 18px;
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Header Styling */
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282c34;
+  padding: 30px;
+  color: azure;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 50px;
+  padding: 10px 20px;
+  font-size: 20px;
+  background: sandybrown;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.nav-links a:hover {
+  background: transparent;
+  border: 1px solid indianred;
+}
+
+/* Footer Styling */
+.footer {
+  position:fixed;
+  margin-top: 100px;
+  margin-bottom: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #282c34;
+  padding: 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Google Translate Dropdown Box */
+.translate-box {
+  margin: 20px;
+  float: right;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+} 
+
+body {
+  top: 0px !important;
+}

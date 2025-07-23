@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Manner</title>
+    <link rel="stylesheet" href="/css/simple.css">
+</head>
+<body>
+    <header class="header-container">
+        <div class="logo">
+            <h2>FindYourLaw.com</h2>
+        </div>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/aboutus">About</a>
+            <a href="/contactus">Contact Us</a>
+            <a href="/help">Help</a>
+        </nav>
+        <!-- Google Translate Dropdown -->
+        <div id="google_translate_element" class="translate-box"></div>
+    </header>
+    <div class="space">
+        <p class="para">
+            As a citizen, understanding the laws that impact your daily life is essential.
+            With this simple search tool, you can easily find information about laws that matter to you.
+            Just enter a keyword or topic to get started.
+        </p>
+        <!-- Form for dropdown lists -->
+        <form action="/search-json" method="POST">
+            <section class="search-section">
+                <div class="input-box">
+                    <select id="main-dropdown" class="search-input" required>
+                        <option value="" disabled selected>Select a Main Topic</option>
+                        <option value="personal matters">Personal Matters</option>
+                        <option value="finance and employment">Finance and Employment</option>
+                        <option value="property and housing">Property and Housing</option>
+                        <option value="public and government">Public and Government</option>
+                    </select>
+                </div>
+                <div class="input-box" id="sub-dropdown-container" style="display: none;">
+                    <select id="sub-dropdown" name="query" class="search-input" required>
+                        <option value="" disabled selected>Select a Sub Topic</option>
+                    </select>
+                </div>
+                <button type="submit" class="search-button">Search</button>
+            </section>
+        </form>
+    </div>
+    <footer class="footer">
+        <p>© 2024 Emperor - Laws And Regulations. All Rights Reserved | Made with ❤️ in India</p>
+    </footer>
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- JavaScript for dynamic dropdowns -->
+    <script>
+        const subTopics = {
+            "personal matters": [
+                { value: "marriage", text: "Marriage" },
+                { value: "family law", text: "Family Law" },
+                { value: "health", text: "Health" }
+            ],
+            "finance and employment": [
+                { value: "employment", text: "Employment" },
+                { value: "gst", text: "GST" },
+                { value: "bankruptcy", text: "Bankruptcy" }
+            ],
+            "property and housing": [
+                { value: "rent agreement", text: "Rent Agreement" },
+                { value: "buying a car", text: "Buying a Car" },
+                { value: "property", text: "Property" }
+            ],
+            "public and government": [
+                { value: "education", text: "Education" },
+                { value: "criminal law", text: "Criminal Law" },
+                { value: "consumer rights", text: "Consumer Rights" }
+            ]
+        };
+
+        document.getElementById('main-dropdown').addEventListener('change', function() {
+            const subDropdownContainer = document.getElementById('sub-dropdown-container');
+            const subDropdown = document.getElementById('sub-dropdown');
+            subDropdown.innerHTML = '<option value="" disabled selected>Select a Sub Topic</option>';
+
+            const selectedMain = this.value;
+            if (subTopics[selectedMain]) {
+                subTopics[selectedMain].forEach(function(subTopic) {
+                    const option = document.createElement('option');
+                    option.value = subTopic.value;
+                    option.text = subTopic.text;
+                    subDropdown.add(option);
+                });
+                subDropdownContainer.style.display = 'block';
+            } else {
+                subDropdownContainer.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

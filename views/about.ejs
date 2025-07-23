@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-image: url('/css/image.png');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: white;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #282c34;
+      padding: 20px;
+      color: azure;
+      z-index: 1000;
+    }
+
+    .logo h2 {
+      margin: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      font-size: medium;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      padding: 10px 20px;
+      background: sandybrown;
+      border-radius: 10px;
+      transition: 0.4s;
+    }
+
+    .nav-links a:hover {
+      background: transparent;
+      border: 1px solid indianred;
+    }
+
+    .about-container {
+      background-color: rgba(11, 9, 9, 0.8);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      width: 90%;
+      margin: 100px auto 60px;
+    }
+
+    .about-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .about-header h1 {
+      color: sandybrown;
+      margin-bottom: 20px;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .about-section {
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .about-section:hover {
+      transform: translateY(-5px);
+    }
+
+    .about-section h2 {
+      color: sandybrown;
+      margin-bottom: 15px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .feature-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: scale(1.05);
+    }
+
+    .feature-card h3 {
+      color: sandybrown;
+      margin-bottom: 15px;
+    }
+
+    .team-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .team-member {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .team-analyst{
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      margin-left: 34%;
+      margin-right: 34%;
+    }
+
+    .team-analyst img{
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    .team-member:hover {
+      transform: scale(1.05);
+    }
+
+    .team-member img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    .social-links {
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      color: sandybrown;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #282c34;
+      padding: 10px;
+      text-align: center;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+      .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 15px;
+      }
+
+      .nav-links a {
+        margin: 5px 0;
+      }
+
+      .about-container {
+        padding: 20px;
+        margin-top: 200px;
+      }
+
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header-container">
+    <div class="logo">
+      <h2>FindYourLaw.com</h2>
+    </div>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="help">Help</a>
+      <a href="/contactus">Contact Us</a>
+      <a href="/feedback">Feedback</a>
+    </nav>
+  </header>
+
+  <main class="about-container">
+    <div class="about-header">
+      <h1>Making the Constitution Accessible to All</h1>
+      <p>Empowering every Indian citizen with knowledge of their constitutional rights and duties</p>
+    </div>
+
+    <div class="about-content">
+      <div class="about-section">
+        <h2>Our Mission</h2>
+        <p>To simplify and democratize understanding of the Indian Constitution, making it accessible to every citizen regardless of their educational background or legal expertise.</p>
+      </div>
+
+      <div class="about-section">
+        <h2>Our Vision</h2>
+        <p>To create a society where every Indian citizen is aware of their constitutional rights and responsibilities, leading to more informed and active civic participation.</p>
+      </div>
+
+      <div class="about-section">
+        <h2>Our Approach</h2>
+        <p>We break down complex constitutional concepts into simple, relatable examples and provide content in multiple Indian languages to reach a wider audience.</p>
+      </div>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Simplified Explanations</h3>
+        <p>Complex legal terms explained in simple language with real-life examples</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Multi-lingual Content</h3>
+        <p>Available in Hindi, English, and major regional languages</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Interactive Learning</h3>
+        <p>Quizzes, case studies, and interactive modules for better understanding</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Expert Commentary</h3>
+        <p>Insights from constitutional experts and legal scholars</p>
+      </div>
+    </div>
+
+    <div class="team-section">
+      <h2>Our Expert Team</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="https://png.pngtree.com/png-vector/20190710/ourlarge/pngtree-user-vector-avatar-png-image_1541962.jpg" alt="Constitutional Expert">
+          <h3>Mr. Shrirang Kulkarni</h3>
+          <p>Back End Expert</p>
+          <div class="social-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <img src="https://tse4.mm.bing.net/th?id=OIP.WpnGIPj1DKAGo-CP64znTwHaHa&pid=Api&P=0&h=180" alt="Education Specialist">
+          <h3>Dr. Diksha Khade</h3>
+          <p>Design Head</p>
+          <div class="social-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <img src="https://tse4.mm.bing.net/th?id=OIP.WpnGIPj1DKAGo-CP64znTwHaHa&pid=Api&P=0&h=180" alt="Language Expert">
+          <h3>Ms. Rutuja Mane</h3>
+          <p>Front End Lead</p>
+          <div class="social-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="team-section">
+      <div class="team-grid">
+        <div class="team-analyst">
+          <img src="https://png.pngtree.com/png-vector/20190710/ourlarge/pngtree-user-vector-avatar-png-image_1541962.jpg" alt="Constitutional Expert">
+          <h3>Mr. Mayur Hiware</h3>
+          <p>Researcher and Analysis Expert</p>
+          <div class="social-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 SamvidhanSaathi. Empowering India through Constitutional Knowledge.</p>
+  </footer>
+</body>
+</html>

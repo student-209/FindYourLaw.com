@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(180deg, #ECFDF5 0%, #E0F2FE 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    padding: 2rem;
+    max-width: 600px;
+    z-index: 1;
+}
+
+/* Decorative Background Elements */
+.background-shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    background: #D1FAE5;
+    top: -100px;
+    left: -100px;
+    animation: float 6s infinite;
+}
+
+.shape-2 {
+    width: 400px;
+    height: 400px;
+    background: #BFDBFE;
+    bottom: -150px;
+    right: -150px;
+    animation: float 8s infinite 1s;
+}
+
+/* Success Icon */
+.success-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 2rem;
+    background: linear-gradient(135deg, #059669 0%, #0284C7 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scaleIn 0.5s ease-out;
+}
+
+.checkmark {
+    width: 60px;
+    height: 60px;
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: drawCheck 1s ease-in-out forwards 0.5s;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #059669;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards 0.7s;
+}
+
+.message {
+    color: #374151;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards 0.9s;
+}
+
+.continue-button {
+    padding: 1.2rem 3.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #059669 0%, #0284C7 100%);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards 1.1s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.continue-button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(5, 150, 105, 0.2);
+}
+
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.continue-button:hover .arrow-icon {
+    transform: translateX(4px);
+}
+
+.decorative-line {
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(135deg, #059669 0%, #0284C7 100%);
+    margin: 3rem auto 0;
+    border-radius: 2px;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards 1.3s;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+@keyframes drawCheck {
+    from { stroke-dashoffset: 100; }
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 640px) {
+    .title {
+        font-size: 2rem;
+    }
+    
+    .message {
+        font-size: 1.1rem;
+    }
+
+    .continue-button {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+    }
+}
